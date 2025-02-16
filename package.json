@@ -1,39 +1,34 @@
 {
-  "name": "qus-node-redis-pubsub",
+  "name": "qus-node-redis-cache",
   "version": "1.0.34",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
-    "./event-manager": {
-      "import": "./dist/event-manager.js",
-      "require": "./dist/event-manager.js",
-      "types": "./dist/event-manager.d.ts"
+    "./cache.interceptor": {
+      "import": "./dist/cache.interceptor.js",
+      "require": "./dist/cache.interceptor.js",
+      "types": "./dist/cache.interceptor.d.ts"
     },
-    "./event-registry": {
-      "import": "./dist/event-registry.js",
-      "require": "./dist/event-registry.js",
-      "types": "./dist/event-registry.d.ts"
+    "./caching.service": {
+      "import": "./dist/caching.service.js",
+      "require": "./dist/caching.service.js",
+      "types": "./dist/caching.service.d.ts"
     },
-    "./publisher": {
-      "import": "./dist/publisher.js",
-      "require": "./dist/publisher.js",
-      "types": "./dist/publisher.d.ts"
+    "./cacheable.decorator": {
+      "import": "./dist/cacheable.decorator.js",
+      "require": "./dist/cacheable.decorator.js",
+      "types": "./dist/cacheable.decorator.d.ts"
     },
-    "./subscriber": {
-      "import": "./dist/subscriber.js",
-      "require": "./dist/subscriber.js",
-      "types": "./dist/subscriber.d.ts"
+    "./standalone-caching.service": {
+      "import": "./dist/standalone-caching.service.js",
+      "require": "./dist/standalone-caching.service.js",
+      "types": "./dist/standalone-caching.service.d.ts"
     },
-    "./subscriber.interface": {
-      "import": "./dist/subscriber.interface.js",
-      "require": "./dist/subscriber.interface.js",
-      "types": "./dist/subscriber.interface.d.ts"
-    },
-    "./subscription-base": {
-      "import": "./dist/subscription-base.js",
-      "require": "./dist/subscription-base.js",
-      "types": "./dist/subscription-base.d.ts"
+    "./exceptions/redis-client-not-obtained.error": {
+      "import": "./dist/redis-client-not-obtained.error.js",
+      "require": "./dist/redis-client-not-obtained.error.js",
+      "types": "./dist/redis-client-not-obtained.error.d.ts"
     }
   },
   "scripts": {
@@ -44,8 +39,10 @@
   },
   "dependencies": {
     "@nestjs/common": "^10.4.15",
+    "@nestjs/core": "^11.0.9",
     "lodash": "^4.17.21",
-    "redis": "^4.7.0"
+    "redis": "^4.7.0",
+    "rxjs": "^7.8.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",

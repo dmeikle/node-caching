@@ -22,12 +22,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-import {EventManager} from "./event-manager";
+import {CachingService} from "./caching-service";
 
-export { EventManager } from './event-manager';
-export { EventRegistry } from './event-registry';
-export { publishMessage } from './publisher';
-export { Subscriber } from './subscriber';
-export { SubscriberInterface } from './subscriber.interface';
-export { SubscriptionBase, Subscription } from './subscription-base';
-export { Event } from './event';
+export { CachingService } from './caching-service';
+export { CacheInterceptor } from './cache.interceptor';
+export { Cacheable } from './cacheable.decorator';
+export { StandaloneCachingService } from './standalone-caching.service';
+export { RedisClientNotObtainedError } from './exceptions/redis-client-not-obtained.error';
